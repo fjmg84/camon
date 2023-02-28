@@ -11,7 +11,6 @@
   "dependencies": {
     "@apollo/client": "^3.7.9",
     "@fontsource/roboto": "^4.5.8",
-    "graphql": "^16.6.0",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.9",
     "@mui/styled-engine-sc": "^5.11.9",
@@ -21,6 +20,7 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
+    "graphql": "^16.6.0",
     "next": "13.1.6",
     "next-graphql": "^2.3.5",
     "react": "18.2.0",
@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "msw": "^1.1.0"
+    "babel-plugin-styled-components": "^2.0.7"
   }
 }
