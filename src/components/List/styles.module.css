@@ -1,4 +1,4 @@
-.content{
+.container{
     margin: 5%;
     padding: 2%;
     border: 2px solid rgb(71 85 105);
@@ -15,12 +15,12 @@
 .book{
     width: auto;
     border: 2px solid rgb(71 85 105);
-    border-radius: 2.5%;
+    border-radius: 10px;
     padding: 15px;
     margin: 10px;
 }
 
-.image_content{
+.image_container{
     padding: 2.5%;
     margin: 1% 1% 4% 1%;
     border: 2px solid rgb(71 85 105);

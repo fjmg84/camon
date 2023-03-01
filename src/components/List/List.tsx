@@ -1,37 +1,35 @@
 import Image from "next/image";
-import { ButtonDelete, ButtonEdit } from "./styled";
+import Link from "next/link";
+import { ButtonDelete, ButtonEdit } from "../styled/Buttons";
+import { StyledLink } from "../styled/Link";
 import styles from "./styles.module.css";
-import books from "../../mocks/data";
+import { Books } from "@/components/interfaces/Book";
 
-export const List = () => {
+const List = ({ books }: { books: Books }) => {
   const deleteBook = (id: number) => {
-    console.log(id);
-  };
-
-  const editBook = (id: number) => {
     console.log(id);
   };
 
   return (
     <>
       <h1>List of the Books</h1>
-      <div className={styles.content}>
+      <div className={styles.container}>
         {books.map((book) => {
           const { id, title, cover, author, year, ISBN, description } = book;
           return (
             <div key={id} className={styles.book}>
-              <div className={styles.image_content}>
-                {cover && (
+              {cover && (
+                <div className={styles.image_container}>
                   <Image
                     className={styles.image}
                     alt={cover}
                     src={cover}
-                    width={100}
-                    height={200}
+                    width={200}
+                    height={400}
                     priority
                   />
-                )}
-              </div>
+                </div>
+              )}
 
               <ul className={styles.data_book}>
                 <li>
@@ -57,7 +55,7 @@ export const List = () => {
               </ul>
 
               <div className={styles.buttons}>
-                <ButtonEdit onClick={() => editBook(id)}>Edit</ButtonEdit>
+                <StyledLink href={`edit/${id}`}>Edit</StyledLink>
                 <ButtonDelete onClick={() => deleteBook(id)}>
                   Delete
                 </ButtonDelete>
@@ -69,3 +67,5 @@ export const List = () => {
     </>
   );
 };
+
+export default List
