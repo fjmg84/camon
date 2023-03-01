@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+}
+.form{
+    margin: 5%;
+    padding: 2%;
+    border: 2px solid rgb(71 85 105);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image_container{
+    padding: 2.5%;
+    margin: 1% 1% 4% 1%;
+    border: 2px solid rgb(71 85 105);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data_book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
