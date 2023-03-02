@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import List from "@/components/List/List";
 import { useQuery } from "@apollo/client";
 import { GET_BOOK_ALL } from "@/query/show";
@@ -26,6 +27,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <section>
+          <Link href="/create"><h1>Create book</h1></Link>
+        </section>
         <List books={books} />
       </main>
     </>
