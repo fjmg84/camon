@@ -288,6 +288,31 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@grafbase/cli-aarch64-apple-darwin@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@grafbase/cli-aarch64-apple-darwin/-/cli-aarch64-apple-darwin-0.17.0.tgz#c2ca0aeed25bbeb56918fd7238c5eaa18d1c014a"
+  integrity sha512-JzmJ5YZsMRmJyjq2W2qitXZXYxydsjZCcw1kUXi562BKDRi/qYncY7yL62ObWYmkI7ly5auTWlAfveHoT6a+Mw==
+
+"@grafbase/cli-x86_64-apple-darwin@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@grafbase/cli-x86_64-apple-darwin/-/cli-x86_64-apple-darwin-0.17.0.tgz#8f518295f3c2aae41f2272da8daa5f8351f0f404"
+  integrity sha512-L6ciB3t8wLsQICi1AU+BbOsq4mVNh0SucZUgLechKRj6b7rlxsRYuKSPTf6PXVnkRVGcxcgx61+5RewNN8Ocvg==
+
+"@grafbase/cli-x86_64-pc-windows-msvc@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@grafbase/cli-x86_64-pc-windows-msvc/-/cli-x86_64-pc-windows-msvc-0.17.0.tgz#d543ab2d04148492d4344f502c2fe0cc8ead6302"
+  integrity sha512-vM25kAGVmZJUdlWAyQ8tzIIMF61rfoBVZe40duv7WnznmCdiRb69banLlVFKyQQkSdrIxa3ljldau1iXTIzLdg==
+
+"@grafbase/cli-x86_64-unknown-linux-musl@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@grafbase/cli-x86_64-unknown-linux-musl/-/cli-x86_64-unknown-linux-musl-0.17.0.tgz#9662cd418ad6ff82dcd5614cc8f7c33563afbd77"
+  integrity sha512-WwKTbhLAt/7M4CZBDC8JXiiTHN2rNYeW6gmWxv6lsnwAkpg84Ual2kZArzVNbTRZgPgZQcgI9l+aIVupDRZ3wQ==
+
+"@grafbase/nextjs-plugin@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@grafbase/nextjs-plugin/-/nextjs-plugin-0.0.2.tgz#182e952cb037891212d524735edf326dd3450ecb"
+  integrity sha512-79Awonex5nhF1Qf3GStjOwrLLf69UvIoBd4v/+GFZmGM6DypOLd4uBDpKNvm74WQzCYSmtrfa4aHniUd/Iu8uQ==
+
 "@graphql-tools/batch-delegate@8.4.21":
   version "8.4.21"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-delegate/-/batch-delegate-8.4.21.tgz#765476c7b09ef4699beb07af228f2eeb1a78204b"
@@ -2171,6 +2196,16 @@ graceful-fs@^4.2.4:
   version "4.2.10"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
+
+grafbase@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/grafbase/-/grafbase-0.17.0.tgz#c5f82e73a0608fbb07105745ac01e14ef8b05f75"
+  integrity sha512-NRrLqdGnMAjZGmLM/dRZEDfydIOxVGZjzu27A2c+DXWGH84kqeyPpzs60DKmmOFQjwOOFTC6bAEUi05Ve6U3MQ==
+  optionalDependencies:
+    "@grafbase/cli-aarch64-apple-darwin" "^0.17.0"
+    "@grafbase/cli-x86_64-apple-darwin" "^0.17.0"
+    "@grafbase/cli-x86_64-pc-windows-msvc" "^0.17.0"
+    "@grafbase/cli-x86_64-unknown-linux-musl" "^0.17.0"
 
 grapheme-splitter@^1.0.4:
   version "1.0.4"

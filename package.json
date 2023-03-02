@@ -26,6 +26,8 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@grafbase/nextjs-plugin": "^0.0.2",
+    "grafbase": "^0.17.0",
     "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.13",
     "babel-plugin-styled-components": "^2.0.7"

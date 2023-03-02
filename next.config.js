@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+const {withGrafbase} = require('@grafbase/nextjs-plugin')
+
+const nextConfig = withGrafbase({
+
   reactStrictMode: true,
   images: {
     domains: ['localhost'],
   }
-}
+})
 
 module.exports = nextConfig
