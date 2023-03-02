@@ -4,9 +4,9 @@ import { ButtonDelete, ButtonEdit } from "../styled/Buttons";
 import { StyledLink } from "../styled/Link";
 import styles from "./styles.module.css";
 import { Books } from "@/components/interfaces/Book";
+import Cover from "../Common/Cover/Cover";
 
 const List = ({ books }: { books: Books }) => {
-
   const deleteBook = (id: string) => {
     console.log(id);
   };
@@ -20,16 +20,13 @@ const List = ({ books }: { books: Books }) => {
           return (
             <div key={id} className={styles.book}>
               {cover && (
-                <div className={styles.image_container}>
-                  <Image
-                    className={styles.image}
-                    alt={cover}
-                    src={cover}
-                    width={200}
-                    height={400}
-                    priority
-                  />
-                </div>
+                <Cover
+                  style={styles.image}
+                  alt={cover}
+                  url={cover}
+                  width={200}
+                  height={400}
+                />
               )}
 
               <ul className={styles.data_book}>
@@ -69,4 +66,4 @@ const List = ({ books }: { books: Books }) => {
   );
 };
 
-export default List
+export default List;

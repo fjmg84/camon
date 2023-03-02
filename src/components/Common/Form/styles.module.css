@@ -1,0 +1,19 @@
+.data_book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    margin: 5%;
+    padding: 2%;
+    border: 2px solid rgb(71 85 105);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
