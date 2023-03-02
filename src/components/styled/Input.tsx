@@ -8,5 +8,14 @@ export const InputText = styled.input`
   margin: 20px;
   border: 2px solid white;
   width: 100%;
+`;
 
+export const TextArea = styled.textarea`
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid white;
+  width: 100%;
 `;
