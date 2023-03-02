@@ -1,7 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Important
-Is necessary to install grafbase and model is:
+Is necessary to install grafbase ```npx grafbase init``` and model is:
+
+## Running grafbase ```npx grafbase dev```
+## Copy the model to the path ``` grafbase/schema.graphql ```
 ```type Books @model {
   id: ID!
   title: String!
