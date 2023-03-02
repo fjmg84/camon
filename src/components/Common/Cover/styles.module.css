@@ -8,7 +8,7 @@
     justify-content: space-around;
     align-items: center;
     height: auto;
-    min-width: 400px;
+    max-width: 400px;
 }
 
 .image {

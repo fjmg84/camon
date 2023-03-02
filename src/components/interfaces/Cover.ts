@@ -6,4 +6,5 @@ export interface ICover {
   style?: string | undefined;
   width?: number;
   height?: number;
+  handleImage?: ({}) => ({});
 }
