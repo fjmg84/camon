@@ -29,28 +29,30 @@ const List = ({ books }: { books: Books }) => {
                 />
               )}
 
-              <ul className={styles.data_book}>
-                <li>
-                  <h6>Title:</h6>
-                  <span>{title}</span>
-                </li>
-                <li>
-                  <h6>Author:</h6>
-                  <span>{author}</span>
-                </li>
-                <li>
-                  <h6>Year:</h6>
-                  <span>{year}</span>
-                </li>
-                <li>
-                  <h6>ISBN:</h6>
-                  <span>{ISBN}</span>
-                </li>
-                <li>
-                  <h6>Description:</h6>
-                  <span>{description}</span>
-                </li>
-              </ul>
+              <div className={styles.box_details}>
+                <ul className={styles.details_book}>
+                  <li>
+                    <h6>Title:</h6>
+                    <span>{title}</span>
+                  </li>
+                  <li>
+                    <h6>Author:</h6>
+                    <span>{author}</span>
+                  </li>
+                  <li>
+                    <h6>Year:</h6>
+                    <span>{year}</span>
+                  </li>
+                  <li>
+                    <h6>ISBN:</h6>
+                    <span>{ISBN}</span>
+                  </li>
+                  <li>
+                    <h6>Description:</h6>
+                    <span>{description}</span>
+                  </li>
+                </ul>
+              </div>
 
               <div className={styles.buttons}>
                 <StyledLink href={`edit/${id}`}>Edit</StyledLink>
