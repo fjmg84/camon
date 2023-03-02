@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const GET_BOOK_ALL = gql`
   query {
-    booksCollection(first: 5) {
+    booksCollection(first: 100) {
       edges {
         node {
           id
