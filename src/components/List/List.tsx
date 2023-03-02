@@ -6,7 +6,8 @@ import styles from "./styles.module.css";
 import { Books } from "@/components/interfaces/Book";
 
 const List = ({ books }: { books: Books }) => {
-  const deleteBook = (id: number) => {
+
+  const deleteBook = (id: string) => {
     console.log(id);
   };
 

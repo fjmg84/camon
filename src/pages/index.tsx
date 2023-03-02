@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
-// import styles from "@/styles/Home.module.css";
 import List from "@/components/List/List";
-import books from "@/mocks/data";
-import { Books } from "@/components/interfaces/Book";
+import { useQuery } from "@apollo/client";
+import { GET_BOOK_ALL } from "@/query/show";
 
-export default function Home({books}: {books: Books}) {
+export default function Home() {
+  const [books, setBooks] = useState([]);
+  const { loading, error, data } = useQuery(GET_BOOK_ALL);
+
+  useEffect(() => {
+    if (data !== undefined && loading === false) {
+      const listBooks = data?.booksCollection?.edges?.map(
+        (book: any) => book.node
+      );
+      setBooks(listBooks);
+    }
+  }, [data, loading]);
 
   return (
     <>
@@ -15,16 +26,8 @@ export default function Home({books}: {books: Books}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        
-        <List books={books}/>
-      
+        <List books={books} />
       </main>
     </>
   );
-}
-
-export async function getServerSideProps(){
-  return {
-    props: {books},
-  }
 }
