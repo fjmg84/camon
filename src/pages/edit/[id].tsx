@@ -1,11 +1,25 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import styles from "@/styles/Home.module.css";
 import Edit from "@/components/Edit/Edit";
+import { useQuery } from "@apollo/client";
+import { GET_BOOK_BY_ID } from "@/query/show";
+import { Book } from "@/components/interfaces/Book";
 
 export default function Update() {
+  const [book, setBook] = useState<Book>();
   const { id } = useRouter().query;
+  const { loading, error, data } = useQuery(GET_BOOK_BY_ID, {
+    variables: { ids: id },
+  });
+
+  useEffect(() => {
+    if (data !== undefined && loading === false) {
+      const { books } = data;
+      setBook(books);
+    }
+  }, [data, loading]);
 
   return (
     <>
@@ -15,11 +29,11 @@ export default function Update() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <section>
-          <Link href="/">Return to home</Link>
-        </section>
+      <section>
+        <Link href="/">Return to home</Link>
+      </section>
       <main>
-        <Edit id={Number(id)} />
+        <Edit book={book} />
       </main>
     </>
   );
