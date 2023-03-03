@@ -29,16 +29,19 @@ export default function Cover({
   const handleOnChange = (e: any) => {
     const file = e.target.files[0];
     setSrcImage(URL.createObjectURL(file));
-    if(handleImage){
+    if (handleImage) {
       if (url) handleImage({ variables: { id: idBook, cover: url } });
-      else handleImage({variables: { cover: "http://localhost:3000/images/cover.jpg" }});
+      else
+        handleImage({
+          variables: { cover: "http://localhost:3000/images/cover.jpg" },
+        });
     }
   };
 
   return (
     <div className={styles.container}>
-      {srcImage && (
-        <div className={styles.image}>
+      <div className={styles.image}>
+        {srcImage && (
           <Image
             alt={(alt ??= "")}
             src={srcImage}
@@ -47,8 +50,8 @@ export default function Cover({
             priority
             className={`${(style ??= "")} ${styles.img}`}
           />
-        </div>
-      )}
+        )}
+      </div>
       {edit && (
         <div className={styles.input}>
           <ButtonSelectImage onClick={() => handleClick()}>

@@ -24,9 +24,10 @@ const List = ({ books }: { books: Books }) => {
 
   return (
     <>
-      <h1>List of the Books</h1>
-      {loading && <h1>Loading Data...</h1>}
+      {loading && <h1>Loading Data...</h1> }
       {books.length > 0 && !loading ? (
+        <>
+        <h1 className={styles.title}>List of the Books</h1>
         <div className={styles.container}>
           {books.map((book) => {
             const { id, title, cover, author, year, ISBN, description } = book;
@@ -63,6 +64,7 @@ const List = ({ books }: { books: Books }) => {
             );
           })}
         </div>
+        </>
       ) : (
         <h2>Books not found</h2>
       )}

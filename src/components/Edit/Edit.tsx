@@ -6,12 +6,14 @@ import Cover from "../Common/Cover/Cover";
 import Form from "../Common/Form/Form";
 
 const Edit = ({ book }: { book: Book | undefined }) => {
-  const [updateBookForm] = useMutation(UPDATE_BOOK_FORM);
+  const [updateBookForm, {loading, error, data}] = useMutation(UPDATE_BOOK_FORM);
   const [updateBookImage] = useMutation(UPDATE_BOOK_IMAGE);
+
+  if(data !== undefined && !loading) alert("Update book successfully") 
 
   return (
     <>
-      <h1>Edit Book</h1>
+      <h1 className={styles.title}>Edit Book</h1>
       <div className={styles.container}>
         <Cover
           handleImage={updateBookImage}

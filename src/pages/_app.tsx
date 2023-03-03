@@ -11,11 +11,11 @@ const client = new ApolloClient({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-  <main>
+  <>
     <ApolloProvider client={client}>
       <Component {...pageProps} />
     </ApolloProvider>
-  </main>
+  </>
   )
 }
  

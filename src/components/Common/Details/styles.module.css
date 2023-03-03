@@ -1,16 +1,21 @@
 .details_book{
-    width: 100%;
+    width: 350px;
     margin: 20px 0 20px;
     list-style: none;
 }
 
 .details_book h6 {
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 10px;
     color:rgb(71 85 105);
 }
 
 .details_book li {
+    font-size: 18px;
     display: flex;
     padding: 0 0 10px;
+}
+
+.details_book li span  {
+    align-self: center;
 }
